@@ -10,13 +10,14 @@ module.exports = {
                 statusCode,
                 message, 
             });
+        }
             const newAccount = await accountModel.create(body);
         return res.status(201).json(newAccount);
-    }
+    },
         
         /*const newAccount = await accountModel.create(body);
         return res.status(201).json(newAccount);*/
-    },
+
     getAccounts: async (req, res) =>{
         const accounts = await accountModel.find();
         return res.status(200).json(accounts);
